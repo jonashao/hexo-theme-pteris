@@ -1,0 +1,29 @@
+# html lang
+language: en
+
+# main menu navigation
+menu:
+  About: /about
+  Contact: /contact
+  Archives: /archives
+
+# Miscelaneous
+favicon: /favicon.ico
+
+# stylesheets loaded in the <head>
+stylesheets:
+- /css/pteris.css
+
+# scripts loaded in the end of the body
+scripts:
+- /js/pteris.js
+
+keywords: pteris
+
+headerImageUrl:
+
+avatarUrl:
+
+title: Pteris theme
+
+description: a hexo theme engined by nunjucks

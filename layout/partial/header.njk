@@ -1,0 +1,35 @@
+<div class="header-fixed" >
+    <nav class="white lime-text lighten-1 " role="navigation">
+        <div class="nav-wrapper container">
+            <div id="logo-container">
+                <a href="/">
+                    {% if theme.logo !== undefined %}
+                        <img width="110" style="padding-top:13px" class="icon"
+                             src="{{ url_for(theme.logo) }}">
+                    {% elif theme.title !== undefined %}
+                        <span class="brand-logo">{{ theme.title }}</span>
+                    {% elif config.title !== undefined %}
+                        <span class="brand-logo">{{ config.title }}</span>
+                    {% endif %}
+                </a>
+            </div>
+
+            <ul class="right hide-on-med-and-down">
+                {% for key,value in theme.menu %}
+                    <li><a href="{{ value }}">{{ key }}</a></li>
+                {% endfor %}
+            </ul>
+
+            <a href="#" data-activates="nav-mobile" class="button-collapse">
+                <i class="fa fa-bars green-text"></i></a>
+        </div>
+    </nav>
+</div>
+
+<ul id="nav-mobile" class="side-nav">
+    {% for key,value in theme.menu %}
+        <li><a href="{{ value }}">{{ key }}</a></li>
+    {% endfor %}
+</ul>
+
+

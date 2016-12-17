@@ -1,0 +1,59 @@
+{% set pageTitle = page.title or config.subtitle or '' %}
+
+{% if is_archive() %}
+    {% set pageTitle = 'Archives' %}
+{% endif %}
+
+{% if is_tag() %}
+    {% set pageTitle = 'Tag: ' + page.tag %}
+{% endif %}
+
+{% if is_category() %}
+    {% set pageTitle = 'Category: ' + page.category %}
+{% endif %}
+
+{% if is_month() %}
+    {% set pageTitle = pageTitle + ': ' + page.month + '/' + page.year %}
+{% endif %}
+
+{% if is_year() %}
+    {% set pageTitle = pageTitle + ': ' + page.year %}
+{% endif %}
+
+{% set pageTitle = pageTitle + ' [ ' + config.title + ' ]' %}
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+    <title>{{ pageTitle }}</title>
+
+    {% if page.keywords %}
+        <meta name="keywords" content="{{ page.keywords }}"/>
+        {% elif page.tags and page.tags.length %}
+        <meta name="keywords" content="{% for tag in page.tags %}{{ tag.name }},{% endfor %}"/>
+        {% elif theme.keywords %}
+        <meta name="keywords" content="{{ theme.keywords }}"/>
+        {% elif config.keywords %}
+        <meta name="keywords" content="{{ config.keywords }}"/>
+    {% endif %}
+
+    {% if theme.favicon %}
+        <link rel="shortcut icon" type="image/x-icon" href="{{ url_for(theme.favicon) }}?v={{ theme.version }}"/>
+    {% endif %}
+
+    {{ css('//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css') }}
+    {{ css('lib/materialize/dist/css/materialize.min.css') }}
+    {{ css('lib/animate.css/animate.min.css') }}
+    {{ css('css/post/atom-one-light.css') }}
+
+    {% if is_home() or is_post() %}
+        {{ css('css/post.css') }}
+    {% endif %}
+
+    {% if theme.stylesheets !== undefined and theme.stylesheets.length > 0 %}
+        {{ css(theme.stylesheets) }}
+    {% endif %}
+</head>

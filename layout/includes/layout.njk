@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="{{ config.language }}">
+{% include '../partial/head.njk' %}
+
+<body>
+
+<header>
+    {% block header %}
+        {% include '../partial/header.njk' %}
+    {% endblock %}
+</header>
+
+<main>
+    {% block main %}{% endblock %}
+</main>
+
+<footer>
+    {% block footer %}
+        {% include '../partial/footer.njk' %}
+    {% endblock %}
+</footer>
+
+{% block scripts %}
+    {% include '../partial/scripts.njk' %}
+{% endblock %}
+
+
+</body>
+</html>

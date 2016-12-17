@@ -1,0 +1,38 @@
+{% extends 'includes/layout.njk' %}
+
+{% block main %}
+    <div class="main">
+        <div class="parallax-container">
+            <div class="section no-pad-bot">
+                <div class="container white-text">
+                    <br><br>
+                    <h1 class="header center">
+                        {% if theme.avatarUrl %}
+                            {{ image_tag(theme.avatarUrl,{class:'responsive-img'}) }}
+                        {% else %}
+                            <i class="fa fa-chevron-circle-down " aria-hidden="true"></i>
+                        {% endif %}
+                    </h1>
+                    <div class="row center">
+                        <h5 class="header col s12">{{ theme.title or config.title }}</h5>
+                        <div class="col s12">anything else to describe your site?</div>
+                    </div>
+                    <br><br>
+                </div>
+            </div>
+
+            <div class="parallax">
+                {% if theme.headerImageUrl %}
+                    {{ image_tag(theme.headerImageUrl,{height:1000px}) }}
+                {% else %}
+                    <div style="height: 100vh; background-color: #53c34a;"></div>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="container">
+            {% include 'includes/recent-posts.njk' %}
+            {% include 'includes/pagination.njk' %}
+        </div>
+    </div>
+{% endblock %}

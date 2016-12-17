@@ -1,0 +1,74 @@
+{% extends 'includes/layout.njk' %}
+
+{% block main %}
+
+
+    {% set categoriesList = list_categories({ show_count: false }) %}
+    {% set tagsList = list_tags({ show_count: false }) %}
+    {% set archivesList = list_archives({ show_count: false }) %}
+
+    <div id="archive">
+        <div class="container">
+            {% if not is_year() %}
+                <div id="archive-all" class="center">
+                    <aside>
+                        <h5>Categories</h5>
+                        {% if categoriesList %}
+                            {{ categoriesList }}
+                        {% else %}
+                            <p>None.</p>
+                        {% endif %}
+                    </aside>
+                    <br>
+
+                    <aside>
+                        <h5>Tags</h5>
+                        {% if tagsList %}
+                            {{ tagsList }}
+                        {% else %}
+                            <p>None.</p>
+                        {% endif %}
+                    </aside>
+                    <br>
+
+                    <aside>
+                        <h5>Archives</h5>
+                        {% if archivesList %}
+                            {{ archivesList }}
+                        {% else %}
+                            <p>None.</p>
+                        {% endif %}
+                    </aside>
+                </div>
+            {% else %}
+                <div id="archive-year" class="center">
+                    <h5>{{ page.month + '/' + page.year }}</h5>
+
+                    <div class="posts">
+                    {% for postItem in page.posts.toArray() %}
+                        <div class="archive-item">
+                            {% if postItem.link %}
+                                <!-- external link -->
+                                <a href="{{ url_for(postItem.link) }}" target="_blank">
+                                    {{ postItem.title or 'No Title' }}
+                                </a>
+                            {% endif %}
+
+                            {% if not postItem.link %}
+                                <!-- internal link -->
+                                <a href="{{ url_for(postItem.path) }}">
+                                    {{ postItem.title or 'No Title' }}
+                                </a>
+                            {% endif %}
+
+                            <time datetime="{{ date_xml(postItem.date) }}">
+                                {{ date(postItem.date) }}
+                            </time>
+                        </div>
+                    {% endfor %}</div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+    {% include 'includes/pagination.njk' %}
+{% endblock %}

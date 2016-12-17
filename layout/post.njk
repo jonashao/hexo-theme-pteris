@@ -1,0 +1,37 @@
+{% extends 'includes/layout.njk' %}
+{% import 'macro/post.njk' as post_template %}
+
+{% block main %}
+
+    <div id="post">
+        <div class="container">
+            <article>
+                <h1 class="center">{{ page.title }}</h1>
+                <p class="post-date center">
+                    <i class="fa fa-calendar"></i>
+                    <time datetime="{{ page.date.toJSON() }}">
+                        {{ date(page.date) }}
+                    </time>
+                </p>
+                <div class="content">
+                    {{ post_template.render(page) }}
+                </div>
+            </article>
+
+            <div class="post-footer">
+                {% if page.prev %}
+                    <a class="left" href="{{ url_for(page.prev.path) }}" rel="prev" title="{{ page.prev.title }}">
+                        <i class="fa fa-arrow-circle-left fa-3x" aria-hidden="true"></i>
+                        <span>  {{ page.prev.title }}</span>
+                    </a>
+                {% endif %}
+                {% if page.next %}
+                    <a class="right" href="{{ url_for(page.next.path) }}" rel="next" title="{{ page.next.title }}">
+                        {{ page.next.title }} <i class="fa fa-arrow-circle-right fa-3x"></i>
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

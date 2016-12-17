@@ -1,0 +1,28 @@
+<div id="posts">
+    {% if site.posts.length > 0 %}
+        <div id="recent-posts">
+            {% for postItem in site.posts.toArray() %}
+                <div class="recent-post-item card hoverable">
+                    <div class="card-content">
+                        <div class="card-title">
+                            <a href="{{ config.root }}{{ postItem.path }}">{{ postItem.title }}</a>
+                        </div>
+
+                        {% if postItem.date %}
+                            <p class="post-date">
+                                <i class="fa fa-calendar"></i>
+                                <time datetime="{{ postItem.date.toJSON() }}">
+                                    {{ date(postItem.date) }}
+                                </time>
+                            </p>
+                        {% endif %}
+
+                        <p>{{ postItem.excerpt }}</p>
+
+
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+</div>

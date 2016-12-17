@@ -1,0 +1,11 @@
+{{ js('lib/jquery/dist/jquery.min.js') }}
+{{ js('lib/materialize/dist/js/materialize.min.js') }}
+{{ js('lib/headroom.js/dist/headroom.min.js') }}
+{{ js('lib/headroom.js/dist/jQuery.headroom.min.js') }}
+{{ js('lib/highlight/src/highlight.js') }}
+
+
+{% if theme.scripts !== undefined and theme.scripts.length > 0 %}
+    {# scripts list from config.yml #}
+    {{ js(theme.scripts) }}
+{% endif %}

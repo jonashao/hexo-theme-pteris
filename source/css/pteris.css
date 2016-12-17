@@ -1,0 +1,54 @@
+body {
+  font-family: "Microsoft YaHei UI", serif;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column; }
+
+main {
+  margin-top: 4rem;
+  flex: 1 0 auto; }
+
+#logo-container {
+  -webkit-text-fill-color: #009688; }
+
+#logo-container .brand-logo {
+  color: #608b70; }
+
+nav ul a {
+  color: #608b70; }
+
+a {
+  color: #009688; }
+
+.header-fixed {
+  position: fixed;
+  z-index: 10;
+  right: 0;
+  left: 0;
+  top: 0; }
+
+.headroom {
+  will-change: transform;
+  transition: transform 200ms linear; }
+
+.headroom--pinned {
+  transform: translateY(0%); }
+
+.headroom--unpinned {
+  transform: translateY(-105%); }
+
+.pagination li.active {
+  background-color: #608b70; }
+
+footer.page-footer {
+  background-color: #009688; }
+
+footer a {
+  color: whitesmoke; }
+
+#archive {
+  margin-top: 3rem; }
+  #archive .posts {
+    margin-top: 2rem; }
+
+/*# sourceMappingURL=pteris.css.map */

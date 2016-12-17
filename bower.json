@@ -1,0 +1,33 @@
+{
+  "name": "pteris",
+  "authors": [
+    "Jonas <imkoche@gmail.com>"
+  ],
+  "description": "a hexo theme in nunjucks",
+  "main": "layout/index",
+  "keywords": [
+    "hexo",
+    "theme",
+    "pteris",
+    "nunjucks"
+  ],
+  "license": "MIT",
+  "homepage": "www.junnanhao.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "screenshots",
+    "src"
+  ],
+  "dependencies": {
+    "materialize": "^0.97.8",
+    "headroom.js": "https://unpkg.com/headroom.js/bower.zip",
+    "animate.css": "^3.5.2",
+    "font-awesome": "^4.7.0",
+    "highlight": "^9.9.0"
+  }
+}

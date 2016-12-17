@@ -1,0 +1,59 @@
+$color-primary: #009688
+$color-secondary: #608b70
+$color-accent: #53c34a
+
+body
+  font-family: "Microsoft YaHei UI", serif
+  display: flex
+  min-height: 100vh
+  flex-direction: column
+
+main
+  margin-top: 4rem
+  flex: 1 0 auto
+
+#logo-container
+  -webkit-text-fill-color: $color-primary
+
+#logo-container .brand-logo
+  color: $color-secondary
+
+nav ul a
+  color: $color-secondary
+
+a
+  color: $color-primary
+
+.header-fixed
+  position: fixed
+  z-index: 10
+  right: 0
+  left: 0
+  top: 0
+
+.headroom
+  will-change: transform
+  transition: transform 200ms linear
+
+.headroom--pinned
+  transform: translateY(0%)
+
+.headroom--unpinned
+  transform: translateY(-105%)
+
+.pagination li.active
+  background-color: $color-secondary
+
+footer.page-footer
+  background-color: $color-primary
+
+footer a
+  color: whitesmoke
+
+#archive
+  margin-top: 3rem
+  .posts
+    margin-top: 2rem
+
+
+
