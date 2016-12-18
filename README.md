@@ -1,7 +1,9 @@
-
-
 # Pteris
 A hexo theme in nunjucks renderer engine.
+
+[Demo](http://www.junnanhao.com)
+
+[中文文档](README.zh.md)
 
 ## Getting start
 in hexo root directory:
@@ -30,31 +32,34 @@ While all pages can be rendered, there are still lots of details that can be cov
 ## Config
 ### theme variables
 Setting those variables in `pteris/_config.yml`
-#### stylesheets
-add your own stylesheets files locations here.
 
-#### scripts
-add your own js files location here
+``` yml
+# add your own stylesheets files locations here.
+stylesheets:
+- style.css  
 
-#### keywords
-helping search engine to better understand your site.
+# add your own js files location here
+scripts:
+- script.js
 
-#### headerImageUrl
-path of the biggest image in the front of index page.
+# helping search engine to better understand your site.
+keywords:  keyword1, keyword2
 
-#### avatarUrl
-your avatar representing in the header of index page
+# path of the biggest image in the front of index page.
+headerImageUrl: 
 
-#### title
-title of your site, you can also set title in hexo config yml file.
-This variable will be represented in the header of index page.
+# your avatar representing in the header of index page
+avatar:
 
-#### description
-use a sentence to describe your site.
-It will also be represented in the header of the index page.
+# title of your site, you can also set title in hexo config yml file. This variable will be represented in the header of index page.
+title:
 
-> more docs are on the way!
+# use a sentence to describe your site. It will also be represented in the header of the index page.
+description:
+```
+*more docs are on the way!*
 
 If you are interested in the project or have some 'special needs',
 welcome to join our project in
-[teambition](https://www.teambition.com/project/585497e096c7dce53871e4be/).
+[teambition](https://www.teambition.com/project/585497e096c7dce53871e4be/)
+ or come it up in issue.

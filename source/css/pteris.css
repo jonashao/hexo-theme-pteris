@@ -37,6 +37,12 @@ a {
 .headroom--unpinned {
   transform: translateY(-105%); }
 
+.parallax-container .avatar {
+  width: 15%;
+  margin: auto; }
+.parallax-container .parallax img {
+  width: 100%; }
+
 .pagination li.active {
   background-color: #608b70; }
 
@@ -50,5 +56,10 @@ footer a {
   margin-top: 3rem; }
   #archive .posts {
     margin-top: 2rem; }
+  #archive .archive-item {
+    padding-bottom: 1rem; }
+
+#tag {
+  margin-top: 5rem; }
 
 /*# sourceMappingURL=pteris.css.map */

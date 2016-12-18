@@ -7,5 +7,15 @@ $(document).ready(function () {
         }
     });
     $('.parallax').parallax();
+    $.adaptiveBackground.run({
+        normalizeTextColor: false,
+        normalizedTextColors: {
+            light: "#000",
+            dark: "#fff"
+        }, success: function ($img, data) {
+            console.log('Success!', $img, data);
+        }
+    });
+
 });
 

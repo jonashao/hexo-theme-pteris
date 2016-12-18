@@ -28,6 +28,7 @@
     "headroom.js": "https://unpkg.com/headroom.js/bower.zip",
     "animate.css": "^3.5.2",
     "font-awesome": "^4.7.0",
-    "highlight": "^9.9.0"
+    "highlight": "^9.9.0",
+    "adaptive.background": "^1.0.3"
   }
 }
