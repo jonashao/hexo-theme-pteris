@@ -16,7 +16,7 @@ bower install
 ```
 ## Project Progress
 * index page : 90%
-* post page : 70%
+* post page : 80%
 * archive page: 50%
 While all pages can be rendered, there are still lots of details that can be cover.
 
@@ -24,7 +24,7 @@ While all pages can be rendered, there are still lots of details that can be cov
 - [ ] SEO for post page
 - [ ] Beautify post page
 - [ ] Analysis plugins
-- [ ] Share plugins
+- [-] Share plugins
 - [ ] Comment plugins
 - [ ] Customization 
 - [ ] docs
@@ -34,28 +34,37 @@ While all pages can be rendered, there are still lots of details that can be cov
 Setting those variables in `pteris/_config.yml`
 
 ``` yml
-# add your own stylesheets files locations here.
-stylesheets:
-- style.css  
+# main menu navigation
+menu:
+  Archives: /archives
+  Tags: /tags
 
-# add your own js files location here
+# Miscelaneous
+favicon: /favicon.png
+
+# stylesheets loaded in the <head>
+stylesheets:
+- /css/pteris.css
+
+# scripts loaded in the end of the body
 scripts:
-- script.js
+- /js/pteris.js
 
 # helping search engine to better understand your site.
-keywords:  keyword1, keyword2
+keywords: pteris
 
-# path of the biggest image in the front of index page.
-headerImageUrl: 
+# the large image in the front of index page.
+headerImageUrl:
 
 # your avatar representing in the header of index page
 avatar:
 
-# title of your site, you can also set title in hexo config yml file. This variable will be represented in the header of index page.
+# title represented in the header of index page.
 title:
 
-# use a sentence to describe your site. It will also be represented in the header of the index page.
+# description represented in the header of the index page.
 description:
+
 ```
 *more docs are on the way!*
 

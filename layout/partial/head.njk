@@ -20,7 +20,15 @@
     {% set pageTitle = pageTitle + ': ' + page.year %}
 {% endif %}
 
-{% set pageTitle = pageTitle + ' [ ' + config.title + ' ]' %}
+{% if pageTitle and pageTitle.length > 0 %}
+    {% set l = ' | ' %}
+{% else %}
+    {% set l ='' %}
+{% endif %}
+{% set pageTitle = pageTitle + l + config.title + ' ' %}
+
+
+{% set description = strip_html(page.excerpt)  or truncate( strip_html(page.content), {length: 100} or theme.description or config.description) %}
 
 
 <head>
@@ -40,10 +48,25 @@
         <meta name="keywords" content="{{ config.keywords }}"/>
     {% endif %}
 
+
+    <meta name="description" content="{{ description }}"/>
+
+
     {% if theme.favicon %}
         <link rel="shortcut icon" type="image/x-icon" href="{{ url_for(theme.favicon) }}?v={{ theme.version }}"/>
     {% endif %}
 
+    {% if theme.rss === '' and config.feed and config.feed.path %}
+        {% set rss = config.feed.path %}
+    {% endif %}
+
+    {% if theme.rss %}
+        <link rel="alternate" href="{{ url_for(rss) }}" title="{{ config.title }}" type="application/atom+xml"/>
+    {% endif %}
+
+    {% if is_post() %}
+        {{ css('lib/social-share.js/dist/css/share.min.css') }}
+    {% endif %}
     {{ css('//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css') }}
     {{ css('lib/materialize/dist/css/materialize.min.css') }}
     {{ css('lib/animate.css/animate.min.css') }}
@@ -51,6 +74,10 @@
 
     {% if is_home() or is_post() %}
         {{ css('css/post.css') }}
+    {% endif %}
+
+    {% if page.photos %}
+        {{ css('lib/lightgallery.js/dist/css/lightgallery.min.css') }}
     {% endif %}
 
     {% if theme.stylesheets !== undefined and theme.stylesheets.length > 0 %}

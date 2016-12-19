@@ -1,4 +1,4 @@
-<div class="header-fixed" >
+<div class="header-fixed">
     <nav class="white lime-text lighten-1 " role="navigation">
         <div class="nav-wrapper container">
             <div id="logo-container">
@@ -6,11 +6,10 @@
                     {% if theme.logo !== undefined %}
                         <img width="110" style="padding-top:13px" class="icon"
                              src="{{ url_for(theme.logo) }}">
-                    {% elif theme.title !== undefined %}
-                        <span class="brand-logo">{{ theme.title }}</span>
-                    {% elif config.title !== undefined %}
-                        <span class="brand-logo">{{ config.title }}</span>
                     {% endif %}
+
+                    <span class="brand-logo">{{ theme.title or config.title}}</span>
+
                 </a>
             </div>
 

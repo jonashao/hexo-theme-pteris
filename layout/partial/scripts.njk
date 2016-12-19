@@ -3,10 +3,16 @@
 {{ js('lib/headroom.js/dist/headroom.min.js') }}
 {{ js('lib/headroom.js/dist/jQuery.headroom.min.js') }}
 {{ js('lib/highlight/src/highlight.js') }}
-{{ js('lib/adaptive.background/src/jquery.adaptive-backgrounds.js') }}
 
+{% if is_post() %}
+    {{ js('lib/social-share.js/dist/js/share.min.js') }}
+{% endif %}
 
 {% if theme.scripts !== undefined and theme.scripts.length > 0 %}
     {# scripts list from config.yml #}
     {{ js(theme.scripts) }}
+{% endif %}
+
+{% if page.photos %}
+    {{ js('lib/lightgallery.js/dist/js/lightgallery.min.js') }}
 {% endif %}

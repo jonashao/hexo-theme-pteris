@@ -69,6 +69,33 @@ footer a
 #tag
   margin-top: 5rem
 
+.pagination li.active a
+  color: #fff
 
+.pagination li a
+  color: #444
+  display: inline-block
+  font-size: 1.2rem
+  padding: 0 10px
+  line-height: 30px
 
+.pagination
+  margin-bottom: 2rem
+  .page-number.current
+    color: #fff
+    background: $color-secondary
+    border-top-color: #ccc
 
+  .prev, .next, .page-number
+    transition-property: border-color
+    transition-duration: 0.2s
+    transition-timing-function: ease-in-out
+    transition-delay: 0s
+
+  .page-number-basic, .prev, .next, .page-number, .space
+    display: inline-block
+    position: relative
+    top: -1px
+    margin: 0 10px
+    padding: 0 10px
+    line-height: 30px

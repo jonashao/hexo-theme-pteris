@@ -3,6 +3,7 @@
 
 [Demo](http://www.junnanhao.com)
 
+[English Document](README.md)
 
 **亮点**
 - 简洁漂亮的材料设计
@@ -12,16 +13,11 @@
 - 流畅的过渡动画
 
 **计划**
-- 分享插件
 - 更好的标签页、归档页
 - 动画
 - Head meta 优化
 - 文章图片显示优化
 - 更多代码风格
-
-
-## 外观
-![pteris](https://cloud.githubusercontent.com/assets/7600440/21292458/8cc902c2-c541-11e6-9760-be58d9a84070.gif)
 
 ## 开始使用
 ### 安装

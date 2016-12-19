@@ -12,8 +12,8 @@
     "nunjucks"
   ],
   "license": "MIT",
-  "homepage": "www.junnanhao.com",
-  "private": true,
+  "homepage": "https://github.com/jonashao/hexo-theme-pteris",
+  "private": false,
   "ignore": [
     "**/.*",
     "node_modules",
@@ -29,6 +29,8 @@
     "animate.css": "^3.5.2",
     "font-awesome": "^4.7.0",
     "highlight": "^9.9.0",
-    "adaptive.background": "^1.0.3"
+    "adaptive.background": "^1.0.3",
+    "social-share.js": "^1.0.2",
+    "lightgallery.js": "^1.0.0"
   }
 }

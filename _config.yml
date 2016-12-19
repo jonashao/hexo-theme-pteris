@@ -3,7 +3,6 @@ language: en
 
 # main menu navigation
 menu:
-
   Archives: /archives
 
 # Miscelaneous
@@ -17,12 +16,17 @@ stylesheets:
 scripts:
 - /js/pteris.js
 
+# helping search engine to better understand your site.
 keywords: pteris
 
-headerImageUrl: /images/tent.jpg
+# the large image in the front of index page.
+headerImageUrl:
 
-avatar: /images/avatar.jpg
+# your avatar representing in the header of index page
+avatar:
 
-title: Jonas
+# title represented in the header of index page.
+title:
 
-description: Pain is inevitable, suffering is optional.
+# description represented in the header of the index page.
+description:

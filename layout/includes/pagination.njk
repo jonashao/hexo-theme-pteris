@@ -1,25 +1,11 @@
-{% set current = page.current %}
-{% set total = page.total %}
 
-{% if total > 1 %}
-    <ul class="pagination center">
-        {% if page.prev !== undefined  and page.prev !== 0 %}
-            <li><a href="{{ page.prev }}">
-                    <i class="fa fa-chevron-left" aria-hidden="true"></i>上一篇 </a></li>
-        {% endif %}
-
-        {% for i in range(1, total +1 ) %}
-            {% if i===  current %}
-                <li class='active'><a>{{ i }}</a></li>
-            {% else %}
-                <li class='waves-effect'><a href="page/{{ i }}">{{ i }}</a></li>
-            {% endif %}
-        {% endfor %}
-
-        {% if page.next !== undefined and page.next !== 0 %}
-            <li class="waves-effect"><a href="{{ page.next }}">
-                    <i class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
-        {% endif %}
-    </ul>
-
+{% if page.prev or page.next %}
+    <div class="pagination center">
+        {{ paginator({
+            prev_text: '<i class="fa fa-angle-left"></i>',
+            next_text: '<i class="fa fa-angle-right"></i>',
+            mid_size: 3
+        }) }}
+    </div>
 {% endif %}
+

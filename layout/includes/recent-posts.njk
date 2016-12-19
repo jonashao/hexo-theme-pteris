@@ -1,12 +1,17 @@
+
+
 <div id="posts">
     {% if site.posts.length > 0 %}
         <div id="recent-posts">
             {% for postItem in site.posts.toArray() %}
+                {% set post_title = truncate(postItem.title or strip_html(postItem.content),{length:80}) %}
+
+
                 <div class="recent-post-item card hoverable">
                     <div class="card-content">
-                        <div class="card-title">
-                            <a href="{{ config.root }}{{ postItem.path }}">{{ postItem.title }}</a>
-                        </div>
+                        <h2 class="header">
+                            <a href="{{ config.root }}{{ postItem.path }}">{{ post_title }}</a>
+                        </h2>
 
                         {% if postItem.date %}
                             <p class="post-date">
