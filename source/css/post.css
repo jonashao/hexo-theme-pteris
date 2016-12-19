@@ -1,133 +1,79 @@
 article img {
-    border: 0;
-    max-width: 100%;
-}
+  border: 0;
+  max-width: 100%; }
 
 #posts {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-}
-
-#posts h1, #posts h2 {
+  margin-top: 3rem;
+  margin-bottom: 3rem; }
+  #posts h1, #posts h2 {
     font-size: 1.3rem;
-    margin: 1rem 0 1rem 0;
-}
-
-#posts h3, #posts h4 {
+    margin: 1rem 0 1rem 0; }
+  #posts h3, #posts h4 {
     font-size: 1.2rem;
-    margin: 1rem 0 1rem 0;
-}
-
-#posts h5, #posts h6 {
+    margin: 1rem 0 1rem 0; }
+  #posts h5, #posts h6 {
     font-size: 1.1rem;
-    margin: 1rem 0 1rem 0;
-}
-
-#posts .post-date {
+    margin: 1rem 0 1rem 0; }
+  #posts .post-date {
     color: rgba(96, 139, 112, 0.7);
-    padding-bottom: 0.5rem;
-}
+    padding-bottom: 0.5rem; }
 
 img {
-    max-width: 100%;
-}
+  max-width: 100%; }
 
 #post {
-    margin-top: 8rem;
-    margin-bottom: 6rem;
-}
-
-#post .content img {
-    max-width: 100%;
-}
-
-#post #post-header {
-    margin-bottom: 2rem;
-}
-
-#post #post-header .post-date {
-    color: grey;
-    padding-bottom: 5rem;
-}
-
-#post .post-gallery .post-photo {
-    max-width: 100%;
-}
-
-#post .post-tag {
+  margin-top: 8rem;
+  margin-bottom: 6rem; }
+  #post code, #post kbd, #post pre, #post samp {
+    font-family: "Lucida Console", Consolas, "Microsoft YaHei UI", monospace, monospace;
+    font-size: 1em; }
+  #post .content img {
+    max-width: 100%; }
+  #post #post-header {
+    margin-bottom: 2rem; }
+    #post #post-header .post-date {
+      color: grey;
+      padding-bottom: 5rem; }
+  #post .post-gallery .post-photo {
+    max-width: 100%; }
+  #post .post-tag {
     margin-top: 2rem;
-    margin-bottom: 2rem;
-}
-
-#post .post-tag a {
-    color: rgba(96, 139, 112, 0.7);
-}
-
-#post .post-footer {
-    padding-top: 2rem;
-}
-
-#post .post-footer i {
-    vertical-align: middle;
-}
-
-#post .post-footer .fa-arrow-circle-left {
-    padding-right: 1rem;
-}
-
-#post .post-footer .fa-arrow-circle-right {
-    padding-left: 1rem;
-}
-
-#post h1 {
-    font-size: 2rem;
-}
-
-#post h2 {
-    font-size: 1.7rem;
-}
-
-#post h3 {
-    font-size: 1.5rem;
-}
-
-#post h4 {
-    font-size: 1.4rem;
-}
-
-#post h5 {
-    font-size: 1.3rem;
-}
-
-#post h6 {
-    font-size: 1.2rem;
-}
-
-@media only screen and (min-width: 601px) and (max-width: 771px) {
+    margin-bottom: 2rem; }
+    #post .post-tag a {
+      color: rgba(96, 139, 112, 0.7); }
+  #post .post-footer {
+    padding-top: 2rem; }
+    #post .post-footer i {
+      vertical-align: middle; }
+    #post .post-footer .fa-arrow-circle-left {
+      padding-right: 1rem; }
+    #post .post-footer .fa-arrow-circle-right {
+      padding-left: 1rem; }
+  #post h1 {
+    font-size: 2rem; }
+  #post h2 {
+    font-size: 1.7rem; }
+  #post h3 {
+    font-size: 1.5rem; }
+  #post h4 {
+    font-size: 1.4rem; }
+  #post h5 {
+    font-size: 1.3rem; }
+  #post h6 {
+    font-size: 1.2rem; }
+  @media only screen and (min-width: 601px) and (max-width: 771px) {
     #post .container {
-        width: 540px;
-    }
-}
-
-@media only screen and (min-width: 772px) and (max-width: 1000px) {
+      width: 540px; } }
+  @media only screen and (min-width: 772px) and (max-width: 1000px) {
     #post .container {
-        width: 70%;
-    }
-}
-
-@media only screen and (min-width: 1001px) {
+      width: 70%; } }
+  @media only screen and (min-width: 1001px) {
     #post .container {
-        width: 700px;
-    }
-}
-
-#post .social-share {
-    margin-top: 2rem;
-}
-
-#post .social-share #share-to {
-    font-family: "Microsoft YaHei UI", Roboto, "Segoe UI", serif;
-    font-weight: 300;
-}
+      width: 700px; } }
+  #post .social-share {
+    margin-top: 2rem; }
+    #post .social-share #share-to {
+      font-family: "Microsoft YaHei UI", Roboto, "Segoe UI", serif;
+      font-weight: 300; }
 
 /*# sourceMappingURL=post.css.map */
