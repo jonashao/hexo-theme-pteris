@@ -3,7 +3,10 @@ language: en
 
 # main menu navigation
 menu:
+  Home: /
+  About: /about
   Archives: /archives
+  
 
 # Miscelaneous
 favicon: /favicon.png

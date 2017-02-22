@@ -1,15 +1,38 @@
 {% extends 'includes/layout.njk' %}
+{% import 'macro/post.njk' as post_template %}
 
-{% block body %}
-    <article id="page">
-        <h1>{{ page.title }}</h1>
-        <div class="content">
-            {{ page.content }}
+{% block main %}
+
+    <div id="page">
+        <div class="container">
+            
+            <article>
+                <div class="content">
+                    {{ post_template.render(page) }}
+                </div>
+            </article>
+
+
+            <div class="social-share" data-mobile-sites="weibo,qq,qzone,facebook,twitter">
+                <span id="share-to">{{ __('post.share_to') }}</span>
+            </div>
+
+            <div class="post-footer">
+                {% if page.prev %}
+                    <a class="left" href="{{ url_for(page.prev.path) }}" rel="prev" title="{{ page.prev.title }}">
+                        <i class="fa fa-arrow-circle-left fa-3x" aria-hidden="true"></i>
+                        <span>  {{ truncate( page.prev.title,{length:80}) }}</span>
+                    </a>
+                {% endif %}
+                {% if page.next %}
+                    <a class="right" href="{{ url_for(page.next.path) }}" rel="next" title="{{ page.next.title }}">
+                        {{ truncate( trim(page.next.title),{length:60}) }}<i
+                                class="fa fa-arrow-circle-right fa-3x "></i>
+                    </a>
+                {% endif %}
+            </div>
         </div>
-        {{ page.date }}
-        {{ post_template.render(page) }}
-        {{ page.link }}
-    </article>
+    </div>
 
-    {% include 'includes/pagination.njk' %}
+
 {% endblock %}

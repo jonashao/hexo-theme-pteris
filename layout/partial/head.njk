@@ -72,7 +72,7 @@
     {{ css('lib/animate.css/animate.min.css') }}
     {{ css('css/post/atom-one-light.css') }}
 
-    {% if is_home() or is_post() %}
+    {% if is_home() or is_post() or page.type === 'about' %}
         {{ css('css/post.css') }}
     {% endif %}
 
