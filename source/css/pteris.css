@@ -9,16 +9,16 @@ main {
   flex: 1 0 auto; }
 
 #logo-container {
-  -webkit-text-fill-color: #009688; }
+  -webkit-text-fill-color: #93b658; }
 
 #logo-container .brand-logo {
-  color: #608b70; }
+  color: #00ab6b; }
 
 nav ul a {
-  color: #608b70; }
+  color: #00ab6b; }
 
 a {
-  color: #009688; }
+  color: #93b658; }
 
 .header-fixed {
   position: fixed;
@@ -44,10 +44,10 @@ a {
   width: 100%; }
 
 .pagination li.active {
-  background-color: #608b70; }
+  background-color: #00ab6b; }
 
 footer.page-footer {
-  background-color: #009688; }
+  background-color: #93b658; }
 
 footer a {
   color: whitesmoke; }
@@ -76,7 +76,7 @@ footer a {
   margin-bottom: 2rem; }
   .pagination .page-number.current {
     color: #fff;
-    background: #608b70;
+    background: #93b658;
     border-top-color: #ccc; }
   .pagination .prev, .pagination .next, .pagination .page-number {
     transition-property: border-color;

@@ -18,17 +18,16 @@ bower install
 * index page : 90%
 * post page : 80%
 * archive page: 50%
-While all pages can be rendered, there are still lots of details that can be cover.
+  While all pages can be rendered, there are still lots of details that can be cover.
 
 ***Main todos***:
 - [ ] SEO for post page
 - [ ] Beautify post page
 - [ ] Analysis plugins
-- [-] Share plugins
+- [x] Share plugins
 - [ ] Comment plugins
 - [ ] Customization 
-- [ ] docs
-
+- [ ] Docs
 ## Config
 ### theme variables
 Setting those variables in `pteris/_config.yml`
