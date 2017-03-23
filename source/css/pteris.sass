@@ -1,28 +1,30 @@
 $color-primary: #93b658
-$color-secondary: #00ab6b
+$color-secondary: #608b70
 $color-accent: #53c34a
 
 body
-  font-family:   "Roboto", "Segoe UI","Microsoft YaHei UI", "Microsoft YaHei UI", serif
+  font-family: "Roboto", "Segoe UI", "Microsoft YaHei UI", "Microsoft YaHei UI", serif
+
   display: flex
   min-height: 100vh
   flex-direction: column
+
+a
+  color: $color-primary
 
 main
   margin-top: 4rem
   flex: 1 0 auto
 
+
+nav
+  background-color: white
+
 #logo-container
   -webkit-text-fill-color: $color-primary
 
-#logo-container .brand-logo
+#logo-container .brand-logo, nav ul a, .button-collapse
   color: $color-secondary
-
-nav ul a
-  color: $color-secondary
-
-a
-  color: $color-primary
 
 .header-fixed
   position: fixed
@@ -42,15 +44,27 @@ a
   transform: translateY(-105%)
 
 .parallax-container
+  .container
+    margin-top: 6rem
   .avatar
-    width: 15%
+    @media only screen and (min-width: 601px) and (max-width: 771px)
+      width: 540px
+    @media only screen and (min-width: 772px) and (max-width: 1000px)
+      width: 70%
+    @media only screen and (min-width: 1001px)
+      width: 700px
     margin: auto
   .parallax
     img
       width: 100%
+      height: auto
 
 .pagination li.active
   background-color: $color-secondary
+
+
+.card .header a
+  color: $color-secondary
 
 footer.page-footer
   background-color: $color-primary
