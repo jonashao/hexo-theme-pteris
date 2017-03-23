@@ -4,21 +4,21 @@ body {
   min-height: 100vh;
   flex-direction: column; }
 
+a {
+  color: #93b658; }
+
 main {
   margin-top: 4rem;
   flex: 1 0 auto; }
 
+nav {
+  background-color: white; }
+
 #logo-container {
   -webkit-text-fill-color: #93b658; }
 
-#logo-container .brand-logo {
-  color: #00ab6b; }
-
-nav ul a {
-  color: #00ab6b; }
-
-a {
-  color: #93b658; }
+#logo-container .brand-logo, nav ul a, .button-collapse {
+  color: #608b70; }
 
 .header-fixed {
   position: fixed;
@@ -37,14 +37,26 @@ a {
 .headroom--unpinned {
   transform: translateY(-105%); }
 
+.parallax-container .container {
+  margin-top: 6rem; }
 .parallax-container .avatar {
-  width: 15%;
+  width: 150px;
   margin: auto; }
+  @media only screen and (min-width: 455px) and (max-width: 636px) {
+    .parallax-container .avatar {
+      width: 33%; } }
+  @media only screen and (min-width: 636px) {
+    .parallax-container .avatar {
+      width: 200px; } }
 .parallax-container .parallax img {
-  width: 100%; }
+  width: 100%;
+  height: auto; }
 
 .pagination li.active {
-  background-color: #00ab6b; }
+  background-color: #608b70; }
+
+.card .header a {
+  color: #608b70; }
 
 footer.page-footer {
   background-color: #93b658; }

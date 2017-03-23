@@ -7,9 +7,7 @@
                         <img width="110" style="padding-top:13px" class="icon"
                              src="{{ url_for(theme.logo) }}">
                     {% endif %}
-
                     <span class="brand-logo">{{ theme.title or config.title}}</span>
-
                 </a>
             </div>
 
@@ -18,7 +16,6 @@
                     <li><a href="{{ value }}">{{ key }}</a></li>
                 {% endfor %}
             </ul>
-
             <a href="#" data-activates="nav-mobile" class="button-collapse">
                 <i class="fa fa-bars green-text"></i></a>
         </div>

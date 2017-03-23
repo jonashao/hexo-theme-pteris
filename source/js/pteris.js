@@ -7,10 +7,6 @@ $(document).ready(function () {
         }
     });
     $('.parallax').parallax();
-    if (lightGallery) {
-        console.log('he');
-        lightGallery(document.getElementById('lightgallery'));
-    }
 
 });
 

@@ -27,6 +27,10 @@
 {% endif %}
 {% set pageTitle = pageTitle + l + config.title + ' ' %}
 
+{% set themeColor = '#93b658' %}
+{% if theme.theme_color %} 
+{% set themeColor = theme.theme_color %}
+{% endif %}
 
 {% set description = strip_html(page.excerpt)  or truncate( strip_html(page.content), {length: 100} or theme.description or config.description) %}
 
@@ -35,7 +39,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-
+    <meta name="theme-color" content= {{ themeColor }} >
     <title>{{ pageTitle }}</title>
 
     {% if page.keywords %}
@@ -48,9 +52,10 @@
         <meta name="keywords" content="{{ config.keywords }}"/>
     {% endif %}
 
-
+    {% if theme.baiduSiteVerification %}
+        <meta name="baidu-site-verification" content="{{theme.baiduSiteVerification}}" />
+    {% endif %}
     <meta name="description" content="{{ description }}"/>
-
 
     {% if theme.favicon %}
         <link rel="shortcut icon" type="image/x-icon" href="{{ url_for(theme.favicon) }}?v={{ theme.version }}"/>
@@ -71,6 +76,7 @@
     {{ css('lib/materialize/dist/css/materialize.min.css') }}
     {{ css('lib/animate.css/animate.min.css') }}
     {{ css('css/post/atom-one-light.css') }}
+    {{ css('css/pteris.css')}}
 
     {% if is_home() or is_post() or page.type === 'about' %}
         {{ css('css/post.css') }}
