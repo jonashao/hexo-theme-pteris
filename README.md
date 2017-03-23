@@ -11,9 +11,13 @@ in hexo root directory:
 ```
 npm install --save hexo-renderer-njks
 git clone https://github.com/jonashao/hexo-theme-pteris themes/pteris
-cd themes/pteris
-bower install
 ```
+
+Applying the theme by modify `_config.yml` in hexo project root directory: 
+```
+theme: pteris
+```
+
 ## Project Progress
 * index page : 90%
 * post page : 80%
@@ -30,7 +34,7 @@ bower install
 - [ ] Docs
 ## Config
 ### theme variables
-Setting those variables in `pteris/_config.yml`
+Setting those variables in `pteris/_config.yml`, you need to create the file for the first time.
 
 ``` yml
 # main menu navigation
@@ -43,14 +47,14 @@ favicon: /favicon.png
 
 # stylesheets loaded in the <head>
 stylesheets:
-- /css/pteris.css
+# - /css/your.css.file.css
 
 # scripts loaded in the end of the body
 scripts:
-- /js/pteris.js
+# - /js/your.js.file.js
 
 # helping search engine to better understand your site.
-keywords: pteris
+keywords: pteris, hexo
 
 # the large image in the front of index page.
 headerImageUrl:

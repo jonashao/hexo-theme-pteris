@@ -8,11 +8,9 @@ bower_components/
 *.log
 
 build/
-dist/
-
 /source/lib/
-!/source/lib/jquery/dist/jquery.*js
-!/source/lib/materialize/dist/
-!/source/lib/headroom.js/dist/headroom.*js
-!/source/lib/animate.css/animate.*css
 /source/image/
+!/source/lib/animate.css/animate.min.css
+!/source/lib/**/dist/
+!/source/lib/highlight/src/highlight.*js
+

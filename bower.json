@@ -31,6 +31,7 @@
     "highlight": "^9.9.0",
     "adaptive.background": "^1.0.3",
     "social-share.js": "^1.0.2",
-    "lightgallery.js": "^1.0.0"
+    "lightgallery.js": "^1.0.0",
+    "material-design-lite": "^1.3.0"
   }
 }

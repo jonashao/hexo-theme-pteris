@@ -24,8 +24,6 @@
 ``` bash
 npm install --save hexo-renderer-njks
 git clone https://github.com/jonashao/hexo-theme-pteris themes/pteris
-cd themes/pteris
-bower install
 ```
 
 ### 应用主题
@@ -35,14 +33,16 @@ theme: pteris
 ```
 
 ### 主题配置
+配置文件：`themes/pteris/_config.yml`，第一次使用请手动创建这个文件，并复制以下默认配置。
+
 ``` yml
 # 自定义的样式文件
 stylesheets:
-- style.css  
+# - css/your.css.file.css  
 
 # 自定义的脚本文件
 scripts:
-- script.js
+# - js/your.js.file.js
 
 # 关键字可以帮助搜索引擎更好的爬取信息
 keywords:  keyword1, keyword2
