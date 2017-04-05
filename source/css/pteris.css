@@ -64,6 +64,11 @@ footer.page-footer {
 footer a {
   color: whitesmoke; }
 
+footer .filing {
+  text-align: center;
+  color: #fff3e0;
+  line-height: 3rem; }
+
 #archive {
   margin-top: 3rem; }
   #archive .posts {
