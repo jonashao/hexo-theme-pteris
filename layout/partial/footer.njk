@@ -6,7 +6,15 @@
                 powered by
                 <a href="http://hexo.io">hexo</a>.
                 theme:
-                <a href="https://github.com/jonashao/hexo-theme-pteris">pteris</a></span></div>
+                <a href="https://github.com/jonashao/hexo-theme-pteris">pteris</a>
+                </span>
+            </div>
         </div>
     </div>
+
+    {% if theme.filing %}
+        <div class="filing">
+            <a href="//www.miitbeian.gov.cn">{{ theme.filing }}</a>
+        </div>
+    {% endif %}
 </footer>
