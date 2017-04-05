@@ -16,3 +16,4 @@ build/
 !/source/lib/**/dist/
 !/source/lib/highlight/src/highlight.*js
 
+layout/includes/site.txt

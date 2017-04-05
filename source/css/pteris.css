@@ -4,7 +4,6 @@ body {
   min-height: 100vh;
   flex-direction: column; }
 
-
 a {
   color: #93b658; }
 
@@ -41,16 +40,14 @@ nav {
 .parallax-container .container {
   margin-top: 6rem; }
 .parallax-container .avatar {
+  width: 150px;
   margin: auto; }
-  @media only screen and (min-width: 601px) and (max-width: 771px) {
+  @media only screen and (min-width: 455px) and (max-width: 636px) {
     .parallax-container .avatar {
-      width: 540px; } }
-  @media only screen and (min-width: 772px) and (max-width: 1000px) {
+      width: 33%; } }
+  @media only screen and (min-width: 636px) {
     .parallax-container .avatar {
-      width: 70%; } }
-  @media only screen and (min-width: 1001px) {
-    .parallax-container .avatar {
-      width: 700px; } }
+      width: 200px; } }
 .parallax-container .parallax img {
   width: 100%;
   height: auto; }
