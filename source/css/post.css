@@ -24,9 +24,16 @@ img {
 #post {
   margin-top: 8rem;
   margin-bottom: 6rem; }
-  #post code, #post kbd, #post pre, #post samp {
+  #post kbd, #post pre, #post samp {
     font-family: "Lucida Console", Consolas, "Microsoft YaHei UI", monospace, monospace;
     font-size: 1em; }
+  #post code {
+    font-family: "Lucida Console", Consolas, "Microsoft YaHei UI", monospace, monospace;
+    background-color: #e7f1d8;
+    font-size: 85%;
+    padding: 0.3rem 0.2rem;
+    border-radius: 3px;
+    margin: 0; }
   #post .content img {
     max-width: 100%; }
   #post #post-header {
@@ -75,5 +82,14 @@ img {
     #post .social-share #share-to {
       font-family: "Microsoft YaHei UI", Roboto, "Segoe UI", serif;
       font-weight: 300; }
+
+figure.highlight {
+  margin: 0; }
+
+.line {
+  height: 20px; }
+
+.gutter pre {
+  padding-right: 1rem; }
 
 /*# sourceMappingURL=post.css.map */

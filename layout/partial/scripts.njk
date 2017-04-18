@@ -2,7 +2,7 @@
 {{ js('lib/materialize/dist/js/materialize.min.js') }}
 {{ js('lib/headroom.js/dist/headroom.min.js') }}
 {{ js('lib/headroom.js/dist/jQuery.headroom.min.js') }}
-{{ js('lib/highlight/src/highlight.js') }}
+
 
 {% if is_post() %}
     {{ js('lib/social-share.js/dist/js/share.min.js') }}
@@ -12,25 +12,27 @@
     {# scripts list from config.yml #}
     {{ js(theme.scripts) }}
 {% endif %}
-{{ js('js/pteris.js')}}
+{{ js('js/pteris.js') }}
 
 {% if page.photos %}
     {{ js('lib/lightgallery.js/dist/js/lightgallery.min.js') }}
 {% endif %}
 
+
+
 {% if theme.baiduAutoSubmit %}
-<script>
-(function(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
-    }
-    else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-</script>
+    <script>
+        (function () {
+            var bp = document.createElement('script');
+            var curProtocol = window.location.protocol.split(':')[0];
+            if (curProtocol === 'https') {
+                bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+            }
+            else {
+                bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+            }
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(bp, s);
+        })();
+    </script>
 {% endif %}

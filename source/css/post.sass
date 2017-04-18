@@ -1,5 +1,5 @@
 $color-secondary: rgba(96, 139, 112, 0.7)
-
+$color-code-background: #e7f1d8
 article img
   border: 0
   max-width: 100%
@@ -30,9 +30,17 @@ img
   margin-top: 8rem
   margin-bottom: 6rem
 
-  code, kbd, pre, samp
+  kbd, pre, samp
     font-family: "Lucida Console", Consolas, "Microsoft YaHei UI", monospace, monospace
     font-size: 1em
+
+  code
+    font-family: "Lucida Console", Consolas, "Microsoft YaHei UI", monospace, monospace
+    background-color: $color-code-background
+    font-size: 85%
+    padding: .3rem .2rem
+    border-radius: 3px
+    margin: 0
 
   .content img
     max-width: 100%
@@ -91,4 +99,11 @@ img
       font-family: "Microsoft YaHei UI", Roboto, "Segoe UI", serif
       font-weight: 300
 
+figure.highlight
+  margin: 0
 
+.line
+  height: 20px
+
+.gutter pre
+  padding-right: 1rem
